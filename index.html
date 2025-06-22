@@ -12,11 +12,13 @@
 </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Refix - Digital Tools & Donations</title>
+  <title>RefixLabs - Digital Tools & Donations</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+      background: linear-gradient(45deg, #6a11cb, #2575fc, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57, #ff9ff3, #54a0ff);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
       color: #fff;
       margin: 0; padding: 0;
       display: flex;
@@ -27,6 +29,13 @@
       text-align: center;
       padding: 20px;
     }
+    
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
     h1 {
       margin-bottom: 0.5em;
       font-size: 2.5rem;
@@ -37,38 +46,109 @@
       line-height: 1.5;
       margin-bottom: 1.5em;
     }
+    
+    .links-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      margin-bottom: 2em;
+      max-width: 800px;
+    }
+    
     a.button {
       display: inline-block;
-      background: #fff;
+      background: rgba(255, 255, 255, 0.9);
       color: #2575fc;
       font-weight: bold;
       padding: 12px 25px;
       border-radius: 30px;
       text-decoration: none;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      transition: background-color 0.3s ease;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
     }
+    
     a.button:hover {
-      background: #f0f0f0;
+      background: rgba(255, 255, 255, 1);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
     }
+    
+    a.button.affiliate {
+      background: rgba(255, 215, 0, 0.9);
+      color: #333;
+    }
+    
+    a.button.affiliate:hover {
+      background: rgba(255, 215, 0, 1);
+    }
+    
     footer {
       margin-top: auto;
       font-size: 0.9rem;
       opacity: 0.8;
     }
+    
+    @media (max-width: 600px) {
+      .links-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      a.button {
+        width: 200px;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>Welcome to Refix</h1>
+  <h1>Welcome to RefixLabs</h1>
   <p>
     Explore free digital tools, educational apps, eBooks, and audiobooks created by Refix.  
     If you find these useful, you can support the project by donating through Ko-fi.
   </p>
-  <a href="https://ko-fi.com/yourkofiprofile" target="_blank" rel="noopener" class="button">
-    Support us on Ko-fi
-  </a>
+  
+  <div class="links-container">
+    <a href="https://ko-fi.com/yourkofiprofile" target="_blank" rel="noopener" class="button">
+      Support us on Ko-fi
+    </a>
+    
+    <a href="#" class="button">
+      Digital Tools
+    </a>
+    
+    <a href="#" class="button">
+      Educational Apps
+    </a>
+    
+    <a href="#" class="button">
+      Free eBooks
+    </a>
+    
+    <a href="#" class="button">
+      Audiobooks
+    </a>
+    
+    <a href="#" class="button affiliate">
+      Recommended Tools
+    </a>
+    
+    <a href="#" class="button affiliate">
+      Partner Resources
+    </a>
+    
+    <a href="https://example-website.com" target="_blank" rel="noopener" class="button">
+      Other Website Here
+    </a>
+    
+    <a href="https://another-site.com" target="_blank" rel="noopener" class="button">
+      Another Site Here
+    </a>
+  </div>
+  
   <footer>
-    &copy; 2025 Refix – All rights reserved.
+    &copy; 2025 RefixLabs – All rights reserved.
   </footer>
 </body>
 </html>
