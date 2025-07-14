@@ -2,106 +2,144 @@
 <html lang="en">
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LXF0JVD1CD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-LXF0JVD1CD');
-</script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>RefixLabs - Digital Tools & Donations</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(45deg, #6a11cb, #2575fc, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57, #ff9ff3, #54a0ff);
-      background-size: 400% 400%;
-      animation: gradientShift 15s ease infinite;
-      color: #fff;
-      margin: 0; padding: 0;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 20px;
-    }
-    
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    
-    h1 {
-      margin-bottom: 0.5em;
-      font-size: 2.5rem;
-    }
-    p {
-      max-width: 600px;
-      font-size: 1.1rem;
-      line-height: 1.5;
-      margin-bottom: 1.5em;
-    }
-    
-    .links-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      justify-content: center;
-      margin-bottom: 2em;
-      max-width: 800px;
-    }
-    
-    a.button {
-      display: inline-block;
-      background: rgba(255, 255, 255, 0.9);
-      color: #2575fc;
-      font-weight: bold;
-      padding: 12px 25px;
-      border-radius: 30px;
-      text-decoration: none;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      transition: all 0.3s ease;
-      backdrop-filter: blur(10px);
-    }
-    
-    a.button:hover {
-      background: rgba(255, 255, 255, 1);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-    }
-    
-    a.button.affiliate {
-      background: rgba(255, 215, 0, 0.9);
-      color: #333;
-    }
-    
-    a.button.affiliate:hover {
-      background: rgba(255, 215, 0, 1);
-    }
-    
-    footer {
-      margin-top: auto;
-      font-size: 0.9rem;
-      opacity: 0.8;
-    }
-    
-    @media (max-width: 600px) {
-      .links-container {
-        flex-direction: column;
-        align-items: center;
-      }
-      
-      a.button {
-        width: 200px;
-      }
-    }
-  </style>
+      gtag('config', 'G-LXF0JVD1CD');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RefixLabs - Your Hub for Free Digital Innovation</title> <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #6a11cb, #2575fc, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57, #ff9ff3, #54a0ff);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            color: #fff;
+            margin: 0; padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
 
-<!-- Google Analytics -->
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        h1 {
+            margin-bottom: 0.5em;
+            font-size: 2.5rem;
+        }
+        p {
+            max-width: 600px;
+            font-size: 1.1rem;
+            line-height: 1.5;
+            margin-bottom: 1.5em;
+        }
+
+        .links-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px; /* Increased gap for better spacing between category blocks */
+            justify-content: center;
+            margin-top: 2em;
+            margin-bottom: 3em; /* Added margin-bottom to space out before footer */
+            max-width: 1000px; /* Adjusted max-width to allow more space for multi-column layout */
+            width: 100%;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .category-overview-block { /* New class for the individual category descriptions */
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            flex: 1 1 calc(33.33% - 25px); /* Tries for 3 items per row on large screens (100% - 2*gap) / 3 */
+            min-width: 280px; /* Ensures blocks don't get too small before wrapping */
+            box-sizing: border-box;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .category-overview-block p {
+            margin-bottom: 15px; /* Space between description and button inside block */
+            font-size: 1rem; /* Slightly smaller font for these descriptions */
+            line-height: 1.4;
+            max-width: none; /* Override parent max-width for internal paragraph */
+        }
+        .category-overview-block a.button {
+            margin-top: auto; /* Pushes button to the bottom of its block */
+        }
+
+
+        @media (max-width: 900px) { /* Adjust breakpoint for 2 columns */
+            .category-overview-block {
+                flex: 1 1 calc(50% - 20px); /* 2 items per row on medium screens */
+                max-width: calc(50% - 20px);
+            }
+        }
+        @media (max-width: 600px) { /* For small screens, keep single column */
+            .links-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+            .category-overview-block {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+            a.button { /* Make buttons full width on small screens */
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+
+        a.button {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.9);
+            color: #2575fc;
+            font-weight: bold;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        a.button:hover {
+            background: rgba(255, 255, 255, 1);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+
+        a.button.affiliate {
+            background: rgba(255, 215, 0, 0.9);
+            color: #333;
+        }
+
+        a.button.affiliate:hover {
+            background: rgba(255, 215, 0, 1);
+        }
+
+        footer {
+            margin-top: auto;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            padding-top: 20px; /* Add some padding above footer content */
+        }
+    </style>
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LXF0JVD1CD"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -111,66 +149,104 @@
 </script>
 
 
-<!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3158623192050019"
      crossorigin="anonymous"></script>
 
 </head>
 <body>
-  <h1>Welcome to RefixLabs</h1>
+  <h1>Welcome to RefixLabs - Your Hub for Free Digital Innovation!</h1>
   <p>
-    Explore free digital tools, educational apps, eBooks, and audiobooks created by Refix.  
-    If you find these useful, you can support the project by donating through Ko-fi.
+    At RefixLabs, we are dedicated to providing a diverse collection of **free digital tools, engaging educational apps, captivating stories, and inspiring audiobooks**. Our mission is to empower you with high-quality resources that simplify your daily tasks, enhance your learning, and spark your imagination, all available at no cost.
   </p>
-  
-  <div class="links-container">
-    <a href="https://ko-fi.com/yourkofiprofile" target="_blank" rel="noopener" class="button">
-      Support us on Ko-fi
-    </a>
-    
-    <a href="digital-tools.html" class="button">
-      Digital Tools
-    </a>
-    
-    <a href="educational-apps.html" class="button">
-      Educational Apps
-    </a>
-    
-    <a href="free-horror-stories.html" class="button">
-      Free Horror Stories
-    </a>
-    
-    <a href="audiobooks.html" class="button">
-      Audiobooks
-    </a>
-    
-    <a href="recommended-tools.html" class="button affiliate">
-      Recommended Tools
-    </a>
-    
-    <!-- <a href="partner-resources.html" class="button affiliate">
-      Partner Resources
-    </a> -->
-    
-    <!-- <a href="ai-prompt-generator.html" class="button">
-      AI Prompt Generator
-    </a> -->
-    
-    <!-- <a href="ai-image-playground.html" class="button">
-      AI Image Playground
-    </a> -->
+  <p>
+    Explore our growing suite of offerings designed for everyday use, students, professionals, and anyone seeking to learn, create, or be entertained. If you find these resources valuable, consider supporting our project by donating through Ko-fi, which helps us continue developing and expanding our free services.
+  </p>
 
-    <a href="ai-writing-assistant.html" class="button">
-      AI Writing Assistant BETA
-    </a>
+  <div class="links-container">
+
+    <div class="category-overview-block">
+        <a href="https://ko-fi.com/yourkofiprofile" target="_blank" rel="noopener" class="button">
+          Support us on Ko-fi
+        </a>
+        <p>
+            Help us keep RefixLabs growing! Your generous donations through Ko-fi directly support
+            the development of new free tools, apps, and content, ensuring we can continue
+            providing valuable resources to everyone. Every contribution makes a difference.
+        </p>
+    </div>
+
+    <div class="category-overview-block">
+        <a href="digital-tools.html" class="button">
+          Digital Tools
+        </a>
+        <p>
+            Discover a versatile collection of browser-based digital tools designed to simplify
+            your daily tasks. From image compression to PDF management, these utilities offer
+            quick and efficient solutions for common digital challenges, all completely free to use.
+        </p>
+    </div>
+
+    <div class="category-overview-block">
+        <a href="educational-apps.html" class="button">
+          Educational Apps
+        </a>
+        <p>
+            Engage your mind with our range of educational apps. Crafted to make learning fun and
+            accessible, these tools cover various subjects, turning complex concepts into enjoyable
+            challenges for students and curious minds alike.
+        </p>
+    </div>
+
+    <div class="category-overview-block">
+        <a href="free-horror-stories.html" class="button"> Free Stories
+        </a>
+        <p>
+            Immerse yourself in captivating narratives across diverse genres. Our growing library
+            of free stories offers tales of horror, adventure, mystery, and more, promising
+            an escape into new worlds with every read.
+        </p>
+    </div>
+
+    <div class="category-overview-block">
+        <a href="audiobooks.html" class="button">
+          Audiobooks
+        </a>
+        <p>
+            Enhance your listening experience with RefixLabs' upcoming collection of free audiobooks.
+            Perfect for commuters, workouts, or relaxation, these high-quality narrations will bring
+            stories and insights directly to your ears.
+        </p>
+    </div>
+
+    <div class="category-overview-block">
+        <a href="recommended-tools.html" class="button affiliate">
+          Recommended Tools
+        </a>
+        <p>
+            Explore a curated selection of tools and resources that we personally recommend.
+            These are external products and services that we believe offer exceptional value
+            and can further enhance your digital productivity and learning journey.
+        </p>
+    </div>
+
+    <div class="category-overview-block">
+        <a href="ai-writing-assistant.html" class="button">
+          AI Writing Assistant BETA
+        </a>
+        <p>
+            Boost your writing efficiency and creativity. Our AI Writing Assistant provides tools
+            to help you summarize, rephrase, and generate ideas for various writing tasks, from
+            emails to essays, making your writing process smoother.
+        </p>
+    </div>
   </div>
-  
-<footer> 
-        <a href="privacy.html">Privacy Policy</a> | 
-        <a href="terms.html">Terms of Use</a> | 
-        <a href="contact.html">Contact</a> |
-        <a href="index.html">Home!!!!</a>
-        &copy; 2025 RefixLabs – All rights reserved.
-    </footer>
+
+<footer>
+    <a href="privacy.html">Privacy Policy</a> |
+    <a href="terms.html">Terms of Use</a> |
+    <a href="contact.html">Contact</a> |
+    <a href="index.html">Home</a>
+    &copy; 2025 RefixLabs – All rights reserved.
+</footer>
 </body>
 </html>

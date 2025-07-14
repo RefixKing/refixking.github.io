@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Educational Apps - RefixLabs</title>
-    <style>
+    <title>Free Stories - RefixLabs</title> <style>
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(45deg, #feca57, #ff9ff3, #54a0ff);
+            background: linear-gradient(45deg, #6a11cb, #2575fc, #ff6b6b);
             background-size: 400% 400%;
             animation: gradientShift 15s ease infinite;
             color: #fff;
@@ -28,19 +27,49 @@
         h1 { font-size: 2.5rem; }
         p { max-width: 600px; font-size: 1.1rem; line-height: 1.5; }
         .links-container {
-            display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin-top: 2em;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* Consistent gap for categories */
+            justify-content: center;
+            margin-top: 2em;
+            max-width: 900px; /* Optional: Constrain width of the container */
+            width: 100%;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+        .category-block { /* NEW: Class for story categories */
+            background: rgba(255, 255, 255, 0.15); /* Slightly distinct background */
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            flex: 1 1 calc(50% - 10px); /* Adjust for 2 columns with gap */
+            min-width: 300px;
+            box-sizing: border-box;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        @media (max-width: 768px) {
+            .category-block {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
         }
         a.button {
             display: inline-block; background: rgba(255, 255, 255, 0.9); color: #2575fc;
             font-weight: bold; padding: 12px 25px; border-radius: 30px; text-decoration: none;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: all 0.3s ease;
+            margin-bottom: 15px; /* Space below the button */
         }
         a.button:hover { transform: translateY(-2px); box-shadow: 0 6px 12px rgba(0,0,0,0.2); }
         footer { margin-top: auto; font-size: 0.9rem; opacity: 0.8; }
-        .back-link { margin-top: 2em; }
+        .back-link {
+            margin-top: 4em;
+            margin-bottom: 2em; /* Consistent spacing */
+        }
     </style>
 
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LXF0JVD1CD"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -50,7 +79,6 @@
 </script>
 
 
-<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LXF0JVD1CD"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -60,30 +88,88 @@
 </script>
 
 
-<!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3158623192050019"
      crossorigin="anonymous"></script>
 
 </head>
 <body>
-    <h1>Educational Apps</h1>
-    <h1>More Apps Coming Soon!</h1>
+    <h1>RefixLabs Free Stories - Dive Into Any Genre!</h1> <p>
+        Welcome to RefixLabs' growing library of free stories, where imagination knows no bounds!
+        We believe in the power of a good tale to transport, inspire, or simply entertain.
+        Explore diverse worlds and narratives, from chilling suspense to heartwarming adventures,
+        all available to read right here.
+    </p>
+
+    <h2>Explore Our Story Categories:</h2>
     <p>
-        Discover our range of educational apps designed to make learning engaging and fun.
-        Perfect for students, teachers, and curious minds of all ages.
+        Click on a category below to discover compelling narratives crafted for every taste.
     </p>
 
     <div class="links-container">
-        <a href="https://refixking.github.io/First-Math-Site-/" class="button">Easy Math</a>
-        <!-- <a href="#" class="button">History Quiz</a> -->
-        <!-- <a href="#" class="button">Science Facts</a> -->
-    </div>
+        <div class="category-block">
+            <a href="https://refixking.github.io/Horror-Story-Site/" class="button">Horror Stories</a>
+            <p>
+                Turn down the lights and dive into the darkness. Our collection of chilling
+                tales and short horror stories is designed to keep you on the edge of your seat.
+                From psychological thrillers to creature features, prepare for a scare.
+            </p>
+        </div>
+
+        <div class="category-block">
+            <a href="#" class="button">Sci-Fi & Fantasy (Coming Soon!)</a>
+            <p>
+                Journey to distant galaxies, explore magical realms, and encounter futuristic
+                technology. This category will feature imaginative science fiction and epic
+                fantasy tales that transport you beyond the ordinary.
+            </p>
+        </div>
+
+        <div class="category-block">
+            <a href="#" class="button">Adventure (Coming Soon!)</a>
+            <p>
+                Embark on thrilling quests, discover lost treasures, and explore uncharted
+                territories. Our adventure stories will take you to the heart of action,
+                mystery, and daring expeditions.
+            </p>
+        </div>
+
+        <div class="category-block">
+            <a href="#" class="button">Romance (Coming Soon!)</a>
+            <p>
+                From heartwarming love stories to passionate sagas, this collection will
+                explore the many facets of human connection and affection. Find tales that
+                make your heart flutter and believe in true love.
+            </p>
+        </div>
+
+        <div class="category-block">
+            <a href="#" class="button">Mystery & Thriller (Coming Soon!)</a>
+            <p>
+                Unravel perplexing puzzles, follow cunning detectives, and delve into suspenseful
+                narratives. These stories are packed with intrigue, unexpected twists, and
+                edge-of-your-seat suspense that will keep you guessing until the very end.
+            </p>
+        </div>
+
+        </div>
+
+    <h3>Your Next Great Read Awaits!</h3>
+    <p>
+        At RefixLabs, we are continuously expanding our collection to bring you more free stories
+        across an even wider array of genres. We're dedicated to providing captivating narratives
+        that you can enjoy anytime, anywhere. Be sure to check back often for new additions!
+    </p>
+
 
     <div class="back-link">
         <a href="index.html" class="button">Back to Home</a>
     </div>
 
     <footer>
+        <a href="privacy.html">Privacy Policy</a> |
+        <a href="terms.html">Terms of Use</a> |
+        <a href="contact.html">Contact</a> |
+        <a href="index.html">Home</a>
         &copy; 2025 RefixLabs – All rights reserved.
     </footer>
 </body>

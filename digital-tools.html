@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -28,19 +29,53 @@
         h1 { font-size: 2.5rem; }
         p { max-width: 600px; font-size: 1.1rem; line-height: 1.5; }
         .links-container {
-            display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin-top: 2em;
+            display: flex;
+            flex-wrap: wrap; /* Allows items to wrap to next line on smaller screens */
+            gap: 30px; /* Slightly increased gap for better visual separation between blocks */
+            justify-content: center;
+            margin-top: 2em;
+            max-width: 1100px; /* Adjusted max-width to allow more space for two columns */
+            width: 100%;
+            padding: 0 20px; /* Add some horizontal padding to prevent blocks from touching screen edges */
+            box-sizing: border-box; /* Include padding in width calculation */
+        }
+        .tool-block {
+            background: rgba(255, 255, 255, 0.1); /* Slightly distinct background for each tool */
+            border-radius: 10px;
+            padding: 25px; /* Slightly more padding inside the blocks */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            flex: 1 1 calc(50% - 15px); /* Adjusted flex-basis for 2 columns: (100% - gap) / 2 */
+            /* The 15px is half of the 30px gap to account for flexbox distributing space */
+            min-width: 300px; /* Ensure a minimum width before wrapping, prevents extreme squishing */
+            box-sizing: border-box; /* Include padding/border in element's total width/height */
+            text-align: left; /* Align text left within each tool block */
+            display: flex; /* Make content within tool-block flexible */
+            flex-direction: column; /* Stack button and text vertically */
+            align-items: flex-start; /* Align text and button to the left within the block */
+        }
+        @media (max-width: 768px) {
+            .links-container {
+                gap: 20px; /* Smaller gap on smaller screens */
+            }
+            .tool-block {
+                flex: 1 1 100%; /* Full width on smaller screens */
+                max-width: 100%;
+            }
         }
         a.button {
             display: inline-block; background: rgba(255, 255, 255, 0.9); color: #2575fc;
             font-weight: bold; padding: 12px 25px; border-radius: 30px; text-decoration: none;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: all 0.3s ease;
+            margin-bottom: 15px; /* Space below the button */
         }
         a.button:hover { transform: translateY(-2px); box-shadow: 0 6px 12px rgba(0,0,0,0.2); }
         footer { margin-top: auto; font-size: 0.9rem; opacity: 0.8; }
-        .back-link { margin-top: 2em; }
+        .back-link {
+            margin-top: 4em;
+            margin-bottom: 2em;
+        }
     </style>
 
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LXF0JVD1CD"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -50,7 +85,6 @@
 </script>
 
 
-<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LXF0JVD1CD"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -60,31 +94,91 @@
 </script>
 
 
-<!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3158623192050019"
      crossorigin="anonymous"></script>
 
 </head>
 <body>
-    <h1>Digital Tools</h1>
+    <h1>RefixLabs Digital Tools - Simplify Your Everyday</h1>
     <p>
-        Here you'll find a collection of free digital tools to help with your daily tasks.
-        These are simple, easy-to-use, and created to be as helpful as possible.
+        Welcome to RefixLabs' comprehensive collection of free digital tools, meticulously
+        designed to streamline your daily tasks and enhance your productivity. In a world
+        where efficiency is key, our easy-to-use, browser-based applications provide instant
+        solutions without the need for complicated software installations or subscriptions.
+        We believe powerful digital assistance should be accessible to everyone, and our
+        suite of tools is crafted with simplicity and effectiveness at its core.
+    </p>
+
+    <p>
+        Explore our growing library of utilities, each built to be as helpful as possible:
     </p>
 
     <div class="links-container">
-        <a href="https://refixking.github.io/image-compressor/" class="button">Image-Compressor</a>
-        <a href="https://refixking.github.io/Advanced-Audio-Converter-Pro/" class="button">Advanced-Audio-Converter-Pro</a>
-        <a href="https://refixking.github.io/image-editor/" class="button">Image-Editor</a>
-        <a href="https://refixking.github.io/PDF-Merger-and-Compressor/" class="button">PDF-Merger-and-Compressor</a>
-        <!-- <a href="comingsoon" class="button">Unit Converter</a> -->
-    </div>
+        <div class="tool-block">
+            <a href="https://refixking.github.io/image-compressor/" class="button">Image-Compressor</a>
+            <p>
+                Optimize your images effortlessly! Our Image Compressor reduces file sizes
+                without compromising quality, perfect for faster website loading, easier
+                email attachments, or saving valuable storage space. Whether you're a
+                web developer, blogger, or just sharing photos with friends, this tool
+                ensures your visuals are efficient and look great.
+            </p>
+        </div>
+
+        <div class="tool-block">
+            <a href="https://refixking.github.io/Advanced-Audio-Converter-Pro/" class="button">Advanced-Audio-Converter-Pro</a>
+            <p>
+                Transform your audio files with ease. This tool converts between various
+                audio formats (like MP3, WAV, FLAC, and more), ensuring compatibility
+                across all your devices and platforms. Experience advanced conversion
+                options for quality and size control, making it ideal for musicians,
+                podcasters, or anyone needing precise audio format management.
+            </p>
+        </div>
+
+        <div class="tool-block">
+            <a href="https://refixking.github.io/image-editor/" class="button">Image-Editor</a>
+            <p>
+                Perform quick and effective edits on your images directly in your browser.
+                Crop, resize, rotate, apply basic filters, or add text overlays with
+                our intuitive Image Editor. It's the perfect solution for fast touch-ups,
+                preparing visuals for social media, presentations, or personal projects,
+                without needing complex software.
+            </p>
+        </div>
+
+        <div class="tool-block">
+            <a href="https://refixking.github.io/PDF-Merger-and-Compressor/" class="button">PDF-Merger-and-Compressor</a>
+            <p>
+                Efficiently manage your PDF documents. Our PDF tool allows you to merge
+                multiple PDF files into a single, cohesive document, simplifying reports
+                and presentations. Additionally, compress large PDF files to reduce
+                their size for easier sharing via email or uploads, all while maintaining
+                document integrity.
+            </p>
+        </div>
+
+        </div>
+
+    <h3>Our Commitment to Free & Accessible Tools</h3>
+    <p>
+        At RefixLabs, our mission is to empower individuals with free, high-quality
+        digital solutions. We are continuously expanding and refining our toolset
+        based on user feedback and technological advancements. Your suggestions are
+        invaluable, and we invite you to explore our current offerings and anticipate
+        the exciting new utilities we have in store. We believe essential digital
+        assistance should be universally accessible.
+    </p>
 
     <div class="back-link">
         <a href="index.html" class="button">Back to Home</a>
     </div>
 
     <footer>
+        <a href="privacy.html">Privacy Policy</a> |
+        <a href="terms.html">Terms of Use</a> |
+        <a href="contact.html">Contact</a> |
+        <a href="index.html">Home</a>
         &copy; 2025 RefixLabs – All rights reserved.
     </footer>
 </body>
