@@ -38,9 +38,52 @@
         a.button:hover { transform: translateY(-2px); box-shadow: 0 6px 12px rgba(0,0,0,0.2); }
         footer { margin-top: auto; font-size: 0.9rem; opacity: 0.8; }
         .back-link { margin-top: 2em; }
+
+        /* NEW CSS FOR NOTEPAD */
+        .notepad-container {
+            background-color: rgba(255, 255, 255, 0.15); /* Slightly transparent white */
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            width: 90%; /* Adjust width as needed */
+            max-width: 500px; /* Max width for larger screens */
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            text-align: left; /* Align text left within notepad */
+        }
+        #miniNotepad {
+            width: 100%;
+            min-height: 150px; /* Initial height */
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace; /* Monospaced font for notepad feel */
+            font-size: 0.95rem;
+            background-color: #f0f0f0; /* Light background for the notepad text area */
+            color: #333;
+            resize: vertical; /* Allow vertical resizing */
+            box-sizing: border-box; /* Include padding/border in element's total width/height */
+        }
+        .notepad-buttons {
+            margin-top: 10px;
+            text-align: right; /* Align buttons to the right */
+        }
+        .notepad-buttons button {
+            background-color: #2575fc;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            margin-left: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .notepad-buttons button:hover {
+            background-color: #1a5acb;
+        }
+
     </style>
 
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LXF0JVD1CD"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -50,7 +93,6 @@
 </script>
 
 
-<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LXF0JVD1CD"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -60,7 +102,6 @@
 </script>
 
 
-<!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3158623192050019"
      crossorigin="anonymous"></script>
 
@@ -76,11 +117,16 @@
        LIMITED USE
     </p>
 
-    <div class="links-container">
-        <!-- <a href="#" class="button">Summarize Text</a>
-        <a href="#" class="button">Rephrase Paragraphs</a>
-        <a href="#" class="button">Draft an Email</a> -->
+    <div class="notepad-container">
+        <h3>Your Notepad</h3>
+        <textarea id="miniNotepad" placeholder="Jot down your ideas or paste content here..."></textarea>
+        <div class="notepad-buttons">
+            <button onclick="clearNotepad()">Clear</button>
+            <button onclick="saveNotepad()">Save (to local storage)</button>
+        </div>
     </div>
+    <div class="links-container">
+        </div>
 
     <div class="back-link">
         <a href="index.html" class="button">Back to Home</a>
@@ -89,5 +135,33 @@
     <footer>
         &copy; 2025 RefixLabs – All rights reserved.
     </footer>
-</body>
+
+    <elevenlabs-convai agent-id="agent_01k026pkv8ep9vgppdwk4bfesg"></elevenlabs-convai>
+    <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+
+    <script>
+        const notepad = document.getElementById('miniNotepad');
+
+        // Load content from local storage when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedContent = localStorage.getItem('miniNotepadContent');
+            if (savedContent) {
+                notepad.value = savedContent;
+            }
+        });
+
+        // Save content to local storage
+        function saveNotepad() {
+            localStorage.setItem('miniNotepadContent', notepad.value);
+            alert('Notepad content saved!'); // Simple feedback
+        }
+
+        // Clear notepad content
+        function clearNotepad() {
+            notepad.value = '';
+            localStorage.removeItem('miniNotepadContent'); // Also clear from storage
+            alert('Notepad content cleared!'); // Simple feedback
+        }
+    </script>
+    </body>
 </html>
