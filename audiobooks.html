@@ -37,10 +37,12 @@
         }
         a.button:hover { transform: translateY(-2px); box-shadow: 0 6px 12px rgba(0,0,0,0.2); }
         footer { margin-top: auto; font-size: 0.9rem; opacity: 0.8; }
-        .back-link { margin-top: 2em; }
+        .back-link {
+            margin-top: 4em; /* Pushes it down from content above */
+            margin-bottom: 2em; /* NEW: Adds space BELOW the button, before the footer */
+        }
     </style>
 
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LXF0JVD1CD"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -50,7 +52,6 @@
 </script>
 
 
-<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LXF0JVD1CD"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -60,31 +61,66 @@
 </script>
 
 
-<!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3158623192050019"
      crossorigin="anonymous"></script>
 
 </head>
 <body>
-    <h1>Audiobooks</h1>
-    <h1>comingsoon!</h1>
-    <!-- <p>
-        Listen to our collection of free audiobooks.
-        Perfect for your commute, workout, or just relaxing at home.
-    </p> -->
+    <h1>Audiobooks - Coming Soon to RefixLabs!</h1>
+    <p>
+        Get ready to immerse yourself in the world of audiobooks with RefixLabs. We're diligently
+        curating a captivating collection of free audio experiences, designed to seamlessly
+        integrate into your daily life. Whether you're commuting, working out, or simply
+        unwinding at home, our aim is to bring you high-quality narration and a diverse range
+        of stories and guides that enrich your everyday.
+    </p>
 
+    <h2>What You Can Look Forward To:</h2>
+    <ul>
+        <li>
+            **Classic Tales Reimagined:** Rediscover timeless literature, from epic adventures
+            to heartwarming narratives, brought to life by talented narrators. Perfect for
+            those who love a good story.
+        </li>
+        <li>
+            **Mindfulness & Wellness Journeys:** Find guided meditations, calming soundscapes,
+            and insightful talks designed to help you relax, focus, and improve your well-being.
+            Your daily dose of calm is on its way.
+        </li>
+        <li>
+            **Productivity & Learning Boosters:** Explore audio guides crafted to inspire
+            focus, enhance learning, and boost your daily routines. Transform your free moments
+            into opportunities for growth.
+        </li>
+    </ul>
+
+    <p>
+        We're passionate about making listening an effortless and enriching part of your day,
+        and we're working hard to bring our first collection to you very soon.
+    </p>
+
+    <p>
+        **While our full library is under construction, chat with our AI assistant below!** It's here to tell
+        you more about our vision for audiobooks, answer your questions about upcoming projects,
+        or just engage in some fun conversation.
+    </p>
+
+    <elevenlabs-convai agent-id="agent_01k04e61jxfeyayjw9vkke94aw"></elevenlabs-convai>
     <div class="links-container">
-        <!-- <a href="#" class="button">Classic Tales: Volume 1</a>
-        <a href="#" class="button">Meditations for a Calm Mind</a>
-        <a href="#" class="button">Journey to the Stars</a> -->
-    </div>
+        </div>
 
     <div class="back-link">
         <a href="index.html" class="button">Back to Home</a>
     </div>
 
     <footer>
+        <a href="privacy.html">Privacy Policy</a> |
+        <a href="terms.html">Terms of Use</a> |
+        <a href="contact.html">Contact</a> |
+        <a href="index.html">Home!!!!</a>
         &copy; 2025 RefixLabs – All rights reserved.
     </footer>
-</body>
+
+    <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+    </body>
 </html>
